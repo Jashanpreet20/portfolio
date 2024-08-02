@@ -28,7 +28,9 @@ export default function Navbar() {
   ];
   return (
     <div className="flex justify-between items-center max-w-[900px] mx-auto h-10 text-white bg-black">
-      <h1 className="text-6xl mt-10 font-signature ml-2 text-blue-800">Jashan</h1>
+      <h1 className="text-6xl mt-10 font-signature ml-2 text-blue-800">
+        Jashan
+      </h1>
 
       <ul className="hidden md:flex">
         {links.map((item) => {
@@ -63,7 +65,14 @@ export default function Navbar() {
                 key={item.id}
                 className="px-4 text-white cursor-pointer capitalize hover:scale-105 duration-200 font-medium"
               >
-                {item.link}
+                <Link
+                  onClick={() => setNav(!nav)}
+                  to={item.link}
+                  smooth
+                  duration={500}
+                >
+                  {item.link}
+                </Link>
               </li>
             );
           })}
