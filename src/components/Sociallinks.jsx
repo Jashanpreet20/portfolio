@@ -22,7 +22,7 @@ export default function Sociallinks() {
         <span className='text-xl'>Github </span><FaGithub size={30}/>
         </> 
       ),
-      href:'https://www.linkedin.com/in/jashan-preet-singh-176951189'
+      href:'https://github.com/Jashanpreet20'
     },
     {
       id:3,
@@ -31,7 +31,7 @@ export default function Sociallinks() {
         <span className='text-xl'>Mail</span><HiOutlineMail size={30}/>
         </> 
       ),
-      href:'https://www.linkedin.com/in/jashan-preet-singh-176951189'
+      href:'https://docs.google.com/document/d/1eU429Be1-rXZGKL-UxpRvGr5rJSrgjlUfmWnh6aSsCs/edit?usp=sharing'
     },
     {
       id:4,

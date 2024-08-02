@@ -13,11 +13,11 @@ export default function Home() {
           <p className="text-gray-400 py-4 text-xl px-2">
             Graduated with a degree in Computer Science with hands-on experience
             in building responsive web applications using the MERN stack
-            (MongoDB, Express.js, React.js, Node.js). Proficient in developing
-            both front-end and back-end components.Solving complex problems, and
+            (MongoDB, Express.js, React.js and Node.js). Proficient in developing
+            both front-end and back-end components. Solving complex problems, and
             continuously learning new technologies. Strong foundation in Full
             Stack Developer and modern frameworks such as Tailwind CSS, with a
-            passion for creating scalable and efficient solutions
+            passion for creating scalable and efficient solutions...
           </p>
 
           <div>

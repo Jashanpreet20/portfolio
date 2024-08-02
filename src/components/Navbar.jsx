@@ -10,10 +10,6 @@ export default function Navbar() {
       link: "home",
     },
     {
-      id: 2,
-      link: "about",
-    },
-    {
       id: 3,
       link: "portfolio",
     },

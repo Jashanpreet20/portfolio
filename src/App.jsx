@@ -11,7 +11,6 @@ function App() {
       <div className="bg-black w-full h-full">
         <Navbar />
         <Home />
-        <About />
         <Portfolio />
         <Experience />
         <Contact />
