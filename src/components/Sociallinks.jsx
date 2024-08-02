@@ -40,7 +40,7 @@ export default function Sociallinks() {
         <span className='text-xl'>Resume</span> <BsFillPersonLinesFill size={30}/>
         </> 
       ),
-      href:'/src/files/Jashanpreet_ resume.pdf',
+      href:'https://docs.google.com/document/d/1eU429Be1-rXZGKL-UxpRvGr5rJSrgjlUfmWnh6aSsCs/edit?usp=sharing',
       // download:true
     }
 
