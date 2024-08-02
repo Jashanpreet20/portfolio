@@ -9,7 +9,7 @@ export default function About() {
             About
           </p>
         </div>
-        <p className="text-xl mt-2 mb-16">
+        <p className="text-xl mt-2y mb-16">
         Graduated with a degree in Computer Science with hands-on experience
             in building responsive web applications using the MERN stack
             (MongoDB, Express.js, React.js, Node.js). Proficient in developing

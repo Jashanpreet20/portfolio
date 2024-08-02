@@ -49,8 +49,8 @@ export default function Portfolio() {
       id: 6,
       src: cv,
       title: "Portfolio Web Application",
-      demo: " ",
-      link: " ",
+      demo: "https://portfolio-xi-wine-31.vercel.app/",
+      link: "https://github.com/Jashanpreet20/portfolio",
     },
   ];
   return (
