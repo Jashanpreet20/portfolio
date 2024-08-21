@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
+import { FiMoon, FiSun } from "react-icons/fi";
+import { ThemeContext } from "./Context/ThemeProvider";
 export default function Navbar() {
   const [nav, setNav] = useState(false);
+
+  const { theme, handleTheme } = useContext(ThemeContext);
   const links = [
     {
       id: 1,
@@ -23,8 +27,16 @@ export default function Navbar() {
     },
   ];
   return (
-    <div className="flex justify-between items-center max-w-[900px] mx-auto h-10 text-white bg-black">
-      <h1 className="text-6xl mt-10 font-signature ml-2 text-blue-800">
+    <div
+      className={`flex justify-between items-center max-w-[900px] mx-auto h-10 ${
+        theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+      }`}
+    >
+      <h1
+        className={`text-6xl mt-10 font-signature ml-2 ${
+          theme === "dark" ? "text-blue-900" : "text-green-500"
+        }`}
+      >
         Jashan
       </h1>
 
@@ -33,7 +45,10 @@ export default function Navbar() {
           return (
             <li
               key={item.id}
-              className="px-4 cursor-pointer capitalize hover:text-blue-800 hover:font-bold hover:scale-125 duration-200 font-medium"
+              className={`px-4 cursor-pointer capitalize 
+               hover:font-bold hover:scale-125 duration-200 font-medium ${
+                 theme === "dark" ? "hover:text-blue-800" : "hover:text-green-800"
+               }`}
             >
               <Link to={item.link} smooth duration={500}>
                 {item.link}
@@ -41,6 +56,14 @@ export default function Navbar() {
             </li>
           );
         })}
+
+        <span onClick={handleTheme} className={`${theme === 'dark' ? "text-white" : "text-black"}`}>
+          {theme === "dark" ? (
+            <FiSun size={26}  />
+          ) : (
+            <FiMoon size={26}  />
+          )}
+        </span>
       </ul>
 
       <div

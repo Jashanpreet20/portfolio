@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import chat from "../assets/portfolio/chat.png";
 import expense from "../assets/portfolio/expense.png";
@@ -6,9 +6,11 @@ import dice from "../assets/portfolio/dice.png";
 import tic from "../assets/portfolio/tic.png";
 import cv from "../assets/portfolio/cv.png";
 import classroom from "../assets/portfolio/classroom.png";
-
+import { ThemeContext } from "./Context/ThemeProvider";
 
 export default function Portfolio() {
+  const { theme } = useContext(ThemeContext);
+
   const portfolios = [
     {
       id: 1,
@@ -54,9 +56,21 @@ export default function Portfolio() {
     },
   ];
   return (
-    <div name="portfolio" className="bg-black w-full mt-16 text-white md:h-screen">
-      <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div className="pb-8">
+    <div
+      name="portfolio"
+      className={`w-full h-screen ${
+        theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+      }`}
+    >
+      <div
+        className={`max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full
+      ${theme === "dark" ? "bg-black text-white" : " bg-white text-black"}`}
+      >
+        <div
+          className={` pb-8 ${
+            theme === "dark" ? "bg-black text-white" : " bg-white text-black"
+          }`}
+        >
           <p className="text-4xl font-bold inline border-b-4 border-r-gray-500 hover:text-blue-800">
             Portfolio
           </p>
@@ -79,7 +93,11 @@ export default function Portfolio() {
                 >
                   demo
                 </a>
-                <a href={link} target="_blank" className="w-1/2 m-4 px-6 py-3 cursor-pointer duration-200 hover:scale-105 capitalize">
+                <a
+                  href={link}
+                  target="_blank"
+                  className="w-1/2 m-4 px-6 py-3 cursor-pointer duration-200 hover:scale-105 capitalize"
+                >
                   code
                 </a>
               </div>
